@@ -1,0 +1,12 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: mongo-rolebinding
+  namespace: developer-project
+subjects:
+  - kind: ServiceAccount
+    name: mongo-sa
+roleRef:
+  kind: Role
+  name: mongo-role
+  apiGroup: rbac.authorization.k8s.io

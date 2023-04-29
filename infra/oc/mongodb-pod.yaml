@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-host
+  namespace: developer-project
+spec:
+    containers:
+      - name: db-host
+        image: registry.connect.redhat.com/mongodb/enterprise-database
+    imagePullSecrets:
+      - name: 11009103-dshtranv-quicklab-pull-secret
